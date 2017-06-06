@@ -4,7 +4,7 @@ public class Time {
 
 	protected void timePassageTest() {
 		// Stopwatch stopwatch = new Stopwatch();
-		System.nanoTime();
+		// System.nanoTime();
 	}
 
 	protected void insertEvent() {
