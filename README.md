@@ -1,2 +1,0 @@
-"# Mid-Eco" 
-# Mid-Eco
