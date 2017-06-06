@@ -1,5 +1,3 @@
-package MidEco;
-
 import java.io.IOException;
 import java.math.BigDecimal;
 

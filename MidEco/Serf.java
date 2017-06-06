@@ -1,5 +1,3 @@
-package MidEco;
-
 public class Serf {
 
 	protected int age;

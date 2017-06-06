@@ -1,5 +1,3 @@
-package MidEco;
-
 public class Tasks {
 
 	public void barter(Serf petitioner, Resource petitionerResource, int petitionerAmount, Serf respondent,

@@ -1,5 +1,3 @@
-package MidEco;
-
 import java.math.BigDecimal;
 
 public class Resource {

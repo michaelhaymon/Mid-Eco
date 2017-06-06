@@ -1,5 +1,3 @@
-package MidEco;
-
 import java.io.IOException;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
@@ -14,6 +12,10 @@ import java.util.List;
 public class ParseWordList {
 
 	final static String FILE_NAME = "WordList.txt";
+	final static String FEMALE_FIRST_NAMES = "";
+	final static String MALE_FIRST_NAMES = "";
+	final static String LAST_NAMES = "";
+
 	final static Charset ENCODING = StandardCharsets.UTF_8;
 	final static int FIRST_NAME_SIZE = 4;
 	final static int LAST_NAME_SIZE = 6;
