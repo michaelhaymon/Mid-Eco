@@ -11,7 +11,6 @@ public class Run {
 		// newSerfAndTradeTest();
 		NameGenerator nG = new NameGenerator();
 		nG.nameTest();
-		nG.formatLastNameList(nG.LAST_NAMES);
 		// System.out.println(System.nanoTime());
 
 	}
