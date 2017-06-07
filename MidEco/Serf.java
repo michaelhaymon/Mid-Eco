@@ -1,13 +1,15 @@
-package MidEco;
-
 public class Serf {
 
-	protected int age;
-	protected String firstName;
-	protected String lastName;
-	protected String sex;
-	Inventory inventory = new Inventory();
-	Tasks tasks = new Tasks();
+	protected int		age;
+	protected String	firstName;
+	protected String	lastName;
+	protected String	sex;
+	// 14
+	protected boolean	isBreedingAge;
+	protected String	motherLastName;
+
+	Inventory			inventory	= new Inventory();
+	Tasks				tasks		= new Tasks();
 
 	public void insertIntoInventory(Resource resource, int amount) {
 		inventory.insertIntoInvertory(resource, amount);
@@ -65,6 +67,22 @@ public class Serf {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	public boolean isBreedingAge() {
+		return isBreedingAge;
+	}
+
+	public void setBreedingAge(boolean isBreedingAge) {
+		this.isBreedingAge = isBreedingAge;
+	}
+
+	public String getMotherLastName() {
+		return motherLastName;
+	}
+
+	public void setMotherLastName(String motherLastName) {
+		this.motherLastName = motherLastName;
 	}
 
 }
