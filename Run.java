@@ -4,14 +4,14 @@ import java.math.BigDecimal;
 public class Run {
 
 	public static void main(String[] args) throws IOException {
-		// ParseWordList parseWordList = new ParseWordList();
+
 		// SerfGenerator serfGenerator = new SerfGenerator();
-		// parseWordList.importWordList();
-		// parseWordList.populateWordListHashMap();
-		// parseWordList.writeBookOfForbiddenNames();
-		SQL sql = new SQL();
-		System.out.println("Connection: " + sql.connect());
-		newSerfAndTradeTest();
+		// SQL sql = new SQL();
+		// System.out.println("Connection: " + sql.connect());
+		// newSerfAndTradeTest();
+		NameGenerator nG = new NameGenerator();
+		nG.nameTest();
+		nG.formatLastNameList(nG.LAST_NAMES);
 		// System.out.println(System.nanoTime());
 
 	}

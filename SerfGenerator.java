@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Random;
 
 public class SerfGenerator {
@@ -25,12 +24,12 @@ public class SerfGenerator {
 	protected String generateFirstName(String sex) {
 		// TODO this should take in account sex and then choose from appropriate
 		// name table.
-		String firstName = randomConsonantVowelPair() + randomConsonantVowelPair();
+		String firstName = "";
 		return formatName(firstName);
 	}
 
 	protected String generateLastName() {
-		String lastName = randomConsonantVowelPair() + randomConsonantVowelPair() + randomConsonantVowelPair();
+		String lastName = "";
 		return formatName(lastName);
 	}
 
@@ -46,41 +45,15 @@ public class SerfGenerator {
 		return sex;
 	}
 
-	protected String randomConsonantVowelPair() {
-		String consonantVowelPair = "";
-		int randomNumber;
-		String randomLetter;
-		Random random = new Random();
-		while (consonantVowelPair.length() < 1) {
-			randomNumber = random.nextInt(25) + 1;
-			randomLetter = getCharForNumber(randomNumber).toString();
-			if (!ParseWordList.VOWELS.contains(randomLetter)) {
-				consonantVowelPair = consonantVowelPair + randomLetter;
-			}
-		}
-		while (consonantVowelPair.length() < 2) {
-			randomNumber = random.nextInt(25) + 1;
-			randomLetter = getCharForNumber(randomNumber).toString();
-			if (ParseWordList.VOWELS.contains(randomLetter)) {
-				consonantVowelPair = consonantVowelPair + randomLetter;
-			}
-		}
-
-		return consonantVowelPair;
-	}
-
-	private String getCharForNumber(int i) {
-		return i > 0 && i < 27 ? String.valueOf((char) (i + 64)) : null;
-	}
-
 	private String formatName(String name) {
 		String formattedName = "";
-		ArrayList<String> nameArrayList = ParseWordList.splitString(name);
-		formattedName = formattedName + nameArrayList.get(0).toUpperCase();
-		for (int i = 1; i < nameArrayList.size(); i++) {
-			formattedName = formattedName + (nameArrayList.get(i).toLowerCase());
-		}
+		// ArrayList<String> nameArrayList = NameGenerator.splitString(name);
+		// formattedName = formattedName + nameArrayList.get(0).toUpperCase();
+		// for (int i = 1; i < nameArrayList.size(); i++) {
+		// formattedName = formattedName + (nameArrayList.get(i).toLowerCase());
+		// }
 		return formattedName;
+
 	}
 
 	protected void serfTest10() {
