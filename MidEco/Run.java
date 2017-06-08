@@ -15,19 +15,39 @@ public class Run {
 	public static void reproduceTest() {
 		Serf mother = new Serf();
 		mother.setFirstName("Mom");
-		mother.setLastName("Hunt");
+		mother.setLastName("Test");
 		mother.setAge(20);
 		mother.setSex("F");
 
 		Serf father = new Serf();
 		father.setFirstName("Dad");
-		father.setLastName("Haymon");
+		father.setLastName("Default");
 		father.setAge(20);
 		father.setSex("M");
 
 		mother.tasks.reproduce(mother, father);
+		mother.tasks.reproduce(mother, father);
 		System.out.println(mother.getChildren().get(0).getFirstName() + " " + mother.getChildren().get(0).getLastName()
 				+ ": " + mother.getChildren().get(0).getAge() + mother.getChildren().get(0).getSex());
+		System.out.println(mother.getChildren().get(1).getFirstName() + " " + mother.getChildren().get(1).getLastName()
+				+ ": " + mother.getChildren().get(1).getAge() + mother.getChildren().get(1).getSex());
+
+		Serf firstChild = mother.getChildren().get(0);
+		firstChild.setAge(20);
+		firstChild.setSex("F");
+
+		Serf secondChild = mother.getChildren().get(1);
+		secondChild.setAge(20);
+		secondChild.setSex("M");
+
+		Serf fStranger = new Serf();
+		fStranger.setFirstName("Stranger");
+		fStranger.setLastName("Lady");
+		fStranger.setAge(20);
+		fStranger.setSex("F");
+
+		firstChild.tasks.reproduce(firstChild, fStranger);
+		firstChild.tasks.reproduce(firstChild, secondChild);
 	}
 
 	public static void newSerfAndTradeTest() {

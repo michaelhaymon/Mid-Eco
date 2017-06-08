@@ -1,5 +1,7 @@
 public class Tasks {
 
+	Validation validation = new Validation();
+
 	public void barter(Serf petitioner, Resource petitionerResource, int petitionerAmount, Serf respondent,
 			Resource respondentResource, int respondentAmount) {
 		int petitionerAmountOfResourceInInventory = petitioner.getInventory()
@@ -24,11 +26,14 @@ public class Tasks {
 		}
 	}
 
+	// Allows two Fertile, Non-related Serfs to reproduce.
 	public Serf reproduce(Serf mother, Serf father) {
 		Serf child = new Serf();
-		if (mother.isFertile() && father.isFertile()) {
+		if (!validation.isCoupleInbreeding(mother, father) && validation.isCoupleFertile(mother, father)) {
 			child = child.newSerf(mother);
 			mother.addChildren(child);
+			father.addChildren(child);
+			child.setParents(mother, father);
 		}
 
 		return child;

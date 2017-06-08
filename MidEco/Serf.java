@@ -10,6 +10,7 @@ public class Serf {
 	protected boolean			isFertile;
 	protected String			motherLastName;
 	protected ArrayList<Serf>	parents		= new ArrayList<>();
+	protected ArrayList<Serf>	siblings	= new ArrayList<>();
 	protected ArrayList<Serf>	children	= new ArrayList<>();
 
 	protected Inventory			inventory	= new Inventory();
@@ -117,6 +118,23 @@ public class Serf {
 	public void setParents(Serf mother, Serf father) {
 		parents.add(mother);
 		parents.add(father);
+	}
+
+	public ArrayList<Serf> getSiblings() {
+		return siblings;
+	}
+
+	public void setSiblings(Serf mother, Serf father) {
+		for (int i = 0; i < mother.getChildren().size(); i++) {
+			siblings.add(mother.getChildren().get(i));
+		}
+		for (int i = 0; i < father.getChildren().size(); i++) {
+			siblings.add(father.getChildren().get(i));
+		}
+	}
+
+	public void addSibling(Serf sibling) {
+		siblings.add(sibling);
 	}
 
 	public ArrayList<Serf> getChildren() {
