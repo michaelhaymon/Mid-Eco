@@ -1,4 +1,4 @@
-Aarland
+﻿Aarland
 Aartse
 Abalardi
 Abaroa
@@ -2188,7 +2188,6 @@ Cueff
 Cugey
 Cugnon
 Cugnoni
-Cul de Louf
 Culai
 Culaj
 Cullmann
@@ -2217,9 +2216,6 @@ Czene
 Czingler
 Czobor
 Czudaj 
-da Cunha-Lisboa
-da Silva
-da Vinci
 Daboussier
 Dabry
 Dachev
@@ -2256,7 +2252,7 @@ Damasco
 Damaske
 Damaskinos
 Damasso
-D'Amato
+d'Amato
 d'Amboise
 d'Ambray
 Damiani
@@ -2275,7 +2271,7 @@ Daniele
 Danieli
 Dankers
 Danneville
-D'Annunzio
+d'Annunzio
 Dano
 d'Ansleville
 Danssaert
@@ -2288,7 +2284,7 @@ Darcy
 Dardai
 Darell
 d'Argentan
-D'Argouges
+d'Argouges
 d'Argues
 Darlang
 d'Armentieres
@@ -2321,9 +2317,9 @@ d'Aunon
 Dautane
 Dautzenberg
 Dautzenburg
-D'Auvay
+d'Auvay
 Dauvergne
-D'Auvrecher
+d'Auvrecher
 Daux
 Davids
 d'Avranches
@@ -2399,7 +2395,7 @@ de Croismare
 de Faicterau
 de Faria
 de Felice
-de felitta
+de Felitta
 de Felius
 de Forest
 de Freitas
@@ -2520,7 +2516,7 @@ de Thibault
 de Tocni
 de Toeni
 de Valles
-de vandes
+de Vandes
 de Vaux
 de Veaux
 de Vertuil
@@ -2644,7 +2640,7 @@ Delecoeur
 Delee
 Delevoye
 Delfs
-D'elia
+d'Elia
 Delicati
 Deligiannis
 Deligiorgis
@@ -2726,8 +2722,6 @@ Deroover
 Derop
 Deroulade
 Derr
-des Moutiers
-des Vaux
 Desailly
 Desanlis
 Desarthe
@@ -2785,15 +2779,15 @@ Dey
 Deyaert
 Deylaud
 Deyoe
-D'Haenens
+d'Haenens
 Dhamo
-D'hauterive
+d'Hauterive
 d'Helion
 Dhenin
 d'Hericy
 Dhinnin
-D'Hondt
-D'Hooghe
+d'Hondt
+d'Hooghe
 d'Houdetot
 Di Biagio
 Di Caprio
@@ -2899,7 +2893,7 @@ Dolder
 Doleuze
 Dolfini
 d'Olgeanc
-D'Olieslager
+d'Olieslager
 Dolige
 Dolmetsch
 Dombi
@@ -2918,7 +2912,7 @@ Donini
 Donis
 Donizetti
 Donnadieu
-D'onofrio
+d'Onofrio
 Dontas
 Donzelli
 Doorn
@@ -2988,8 +2982,8 @@ Druel
 Drum
 Druppers
 du Bec
-du Bois-Hebert
-du Bosc-Roard
+du Bois
+du Bosc
 du Breuil
 du Buisson
 du Gouey
@@ -3075,7 +3069,7 @@ Durje
 Durkheim
 Durlacher
 Durot
-D'urso
+d'Urso
 Durufl¾
 Durville
 Dutari
@@ -4496,7 +4490,7 @@ Hendrickson
 Hendrickszen
 Hendrix
 Hendry
-Hendrykxx
+Hendryk
 Hengst
 Hengstenberg
 Henion
@@ -5405,7 +5399,7 @@ Lacusta
 l'Adoube
 Lafeber
 Lafenestre
-Laffon-parias
+Laffon-Parias
 Lafitte
 Laforet
 Lafranchi
@@ -5599,7 +5593,7 @@ le Marechal
 le Marinier
 le marquand
 le Masson
-le moigne
+le Moigne
 le Nain
 le Nôtre
 le Paulmier
@@ -5740,7 +5734,7 @@ Leysen
 Lezertua
 Lezeta
 Lézine
-L'Heureux
+l'Heureux
 Lhuillier
 Lianis
 Liapchev
@@ -5763,7 +5757,6 @@ Ligeti
 Ligier
 Ligonier
 Liguori
-L'ile
 Lilov
 Limouzylise
 Linazasoro
@@ -9508,26 +9501,24 @@ van de Vloet
 van de Voorde
 van de Walle
 van Delinde
-van den Abeele
-van den Berghe
-van den Bosch
-van den Branden
-van den Broeck
-van den Brucke
-van den Brul
-van den Eeden
-van den Eynde
-van den Nieuwenhuyzen
-van den Wyngaert
 van der Aa
+van der Abeele
 van der Beek
 van der Berg
+van der Berghe
 van der Bilt
 van der Bogaerde
+van der Bosch
+van der Branden
+van der Broeck
 van der Broek
+van der Brucke
+van der Brul
 van der Burgh
 van der Capellen
+van der Eeden
 van der Elst
+van der Eynde
 van der Goot
 van der Graf
 van der Hagen
@@ -9541,6 +9532,7 @@ van der Leur
 van der Linde
 van der Linden
 van der Meer
+van der Nieuwenhuyzen
 van der Poel
 van der Poorten
 van der Sanden
@@ -9555,6 +9547,7 @@ van der Walt
 van der Wath
 van der Weken
 van der Wouwer
+van der Wyngaert
 van der Zant
 van Deuen
 van Dien
@@ -9625,7 +9618,7 @@ van Imburgh
 van Immerseel
 van Kemseke
 van Kerckhove
-van kerckhoven
+van Kerckhoven
 van Kol
 van Koperen
 van Kortrijk
@@ -9745,16 +9738,16 @@ van Wooglum
 van Wyck
 van Wyk
 van Ydersteyn
-vanali
-vancini
-vanderstratton
-vandervliet
-vanderzee
-vanel
-vangheluwe
-vanhoudt
-vanni
-vansteenburghe
+Vanali
+Vancini
+Vanderstratton
+Vandervliet
+Vanderzee
+Vanel
+Vangheluwe
+Vanhoudt
+Vanni
+Vansteenburghe
 Vaphiadis
 Vardakastanis
 Varga
@@ -9960,8 +9953,6 @@ Vis
 Visagie
 Vischspoel
 Visconti
-Vis-de-Louf
-Vis-de-Loup
 Visdomini
 Visse
 Vitagliano
@@ -10016,19 +10007,19 @@ Volonte
 Volpe
 Voltaire
 Volz
-Von Croy
-Von Ettingshausen
-Von Freidenreich
-Von Hengel
-Von Hoesslin
-Von Maarsen
-Von Saher
-Von schroeder
-Von Stroheim
-Von Tirpitz
-Von Trotha
-Von Tunzelmann
-Von Zitzewitz
+von Croy
+von Ettingshausen
+von Freidenreich
+von Hengel
+von Hoesslin
+von Maarsen
+von Saher
+von schroeder
+von Stroheim
+von Tirpitz
+von Trotha
+von Tunzelmann
+von Zitzewitz
 Vonck
 Vonk
 Voorhees
@@ -10386,8 +10377,6 @@ Ziganda
 Zijlstra
 Zikos
 Zilli
-Zimmerman
-Zimmermann
 Zimolo
 Zindilis
 Zingler
@@ -10438,4 +10427,4 @@ Zuyderwyk
 Zuzuarregi
 Zweig
 Zweistra
-Zylberstein 
+Zylberstein

@@ -1,5 +1,3 @@
-package MidEco;
-
 public class Time {
 
 	protected void timePassageTest() {
