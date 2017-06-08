@@ -24,4 +24,15 @@ public class Tasks {
 		}
 	}
 
+	public Serf reproduce(Serf mother, Serf father) {
+		Serf child = new Serf();
+		if (mother.isFertile() && father.isFertile()) {
+			SerfGenerator serfGenerator = new SerfGenerator();
+			child = serfGenerator.newSerf(mother);
+			mother.addChildren(child);
+		}
+
+		return child;
+	}
+
 }

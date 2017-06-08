@@ -2,11 +2,11 @@ import java.util.Random;
 
 public class SerfGenerator {
 
-	protected Serf newSerf(String motherLastName) {
+	protected Serf newSerf(Serf mother) {
 		NameGenerator nameGenerator = new NameGenerator();
 		Serf newSerf = new Serf();
 		newSerf.setSex(generateSex());
-		newSerf.setMotherLastName(motherLastName);
+		newSerf.setMotherLastName(mother.getLastName());
 		nameGenerator.generateName(newSerf);
 
 		return newSerf;
@@ -23,12 +23,4 @@ public class SerfGenerator {
 		return sex;
 	}
 
-	protected void serfTest10() {
-		SerfGenerator serfGenerator = new SerfGenerator();
-		for (int i = 0; i < 10; i++) {
-			Serf serf = serfGenerator.newSerf(null);
-			System.out.println(
-					serf.getFirstName() + " " + serf.getLastName() + ": " + serf.getAge() + " " + serf.getSex());
-		}
-	}
 }

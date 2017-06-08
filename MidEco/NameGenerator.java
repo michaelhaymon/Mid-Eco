@@ -1,7 +1,8 @@
 import java.io.BufferedReader;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -13,12 +14,6 @@ public class NameGenerator {
 
 	final protected static ArrayList<String>	firstNameArrayList	= new ArrayList<>();
 	final protected static ArrayList<String>	lastNameArrayList	= new ArrayList<>();
-
-	public void nameTest() { // Tests Serf Generation using mother's name.
-		SerfGenerator serfGen = new SerfGenerator();
-		Serf serf = serfGen.newSerf("l'Angel");
-		System.out.println(serf.getFirstName() + " " + serf.getLastName());
-	}
 
 	public void generateName(Serf serf) {
 		// Get sex of Serf
@@ -47,8 +42,10 @@ public class NameGenerator {
 	protected void populateNameArrayList(ArrayList<String> nameArrayList, String fileName) {
 
 		try {
-			FileReader fileReader = new FileReader(fileName);
-			BufferedReader bufferedReader = new BufferedReader(fileReader);
+			// FileReader fileReader = new FileReader(fileName);
+			BufferedReader bufferedReader = new BufferedReader(
+					new InputStreamReader(new FileInputStream(fileName), "UTF8"));
+
 			String line = null;
 
 			while ((line = bufferedReader.readLine()) != null) {

@@ -5,14 +5,29 @@ public class Run {
 
 	public static void main(String[] args) throws IOException {
 
-		// SerfGenerator serfGenerator = new SerfGenerator();
 		// SQL sql = new SQL();
 		// System.out.println("Connection: " + sql.connect());
-		// newSerfAndTradeTest();
-		NameGenerator nG = new NameGenerator();
-		nG.nameTest();
-		// System.out.println(System.nanoTime());
+		newSerfAndTradeTest();
+		reproduceTest();
 
+	}
+
+	public static void reproduceTest() {
+		Serf mother = new Serf();
+		mother.setFirstName("Mom");
+		mother.setLastName("Hunt");
+		mother.setAge(20);
+		mother.setSex("F");
+
+		Serf father = new Serf();
+		father.setFirstName("Dad");
+		father.setLastName("Haymon");
+		father.setAge(20);
+		father.setSex("M");
+
+		mother.tasks.reproduce(mother, father);
+		System.out.println(mother.getChildren().get(0).getFirstName() + " " + mother.getChildren().get(0).getLastName()
+				+ ": " + mother.getChildren().get(0).getAge() + mother.getChildren().get(0).getSex());
 	}
 
 	public static void newSerfAndTradeTest() {
