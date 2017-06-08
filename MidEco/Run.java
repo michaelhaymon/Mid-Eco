@@ -7,7 +7,7 @@ public class Run {
 
 		// SQL sql = new SQL();
 		// System.out.println("Connection: " + sql.connect());
-		newSerfAndTradeTest();
+		// newSerfAndTradeTest();
 		reproduceTest();
 
 	}
