@@ -1,15 +1,41 @@
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Serf {
 
-	protected int		age;
-	protected String	firstName;
-	protected String	lastName;
-	protected String	sex;
-	// 14
-	protected boolean	isBreedingAge;
-	protected String	motherLastName;
+	protected int				age			= 0;
+	protected String			firstName;
+	protected String			lastName;
+	protected String			sex;
+	protected boolean			isFertile;
+	protected String			motherLastName;
+	protected ArrayList<Serf>	parents		= new ArrayList<>();
+	protected ArrayList<Serf>	siblings	= new ArrayList<>();
+	protected ArrayList<Serf>	children	= new ArrayList<>();
 
-	Inventory			inventory	= new Inventory();
-	Tasks				tasks		= new Tasks();
+	protected Inventory			inventory	= new Inventory();
+	protected Tasks				tasks		= new Tasks();
+
+	protected Serf newSerf(Serf mother) {
+		NameGenerator nameGenerator = new NameGenerator();
+		Serf newSerf = new Serf();
+		newSerf.setSex(generateSex());
+		newSerf.setMotherLastName(mother.getLastName());
+		nameGenerator.generateName(newSerf);
+
+		return newSerf;
+	}
+
+	protected String generateSex() {
+		String sex = "F";
+		int randomNumber;
+		Random random = new Random();
+		randomNumber = random.nextInt(20) + 1;
+		if (randomNumber % 2 == 0) {
+			sex = "M";
+		}
+		return sex;
+	}
 
 	public void insertIntoInventory(Resource resource, int amount) {
 		inventory.insertIntoInvertory(resource, amount);
@@ -69,12 +95,12 @@ public class Serf {
 		this.age = age;
 	}
 
-	public boolean isBreedingAge() {
-		return isBreedingAge;
+	public boolean isFertile() {
+		return (age >= 15 && age <= 45);
 	}
 
 	public void setBreedingAge(boolean isBreedingAge) {
-		this.isBreedingAge = isBreedingAge;
+		this.isFertile = isBreedingAge;
 	}
 
 	public String getMotherLastName() {
@@ -83,6 +109,40 @@ public class Serf {
 
 	public void setMotherLastName(String motherLastName) {
 		this.motherLastName = motherLastName;
+	}
+
+	public ArrayList<Serf> getParents() {
+		return parents;
+	}
+
+	public void setParents(Serf mother, Serf father) {
+		parents.add(mother);
+		parents.add(father);
+	}
+
+	public ArrayList<Serf> getSiblings() {
+		return siblings;
+	}
+
+	public void setSiblings(Serf mother, Serf father) {
+		for (int i = 0; i < mother.getChildren().size(); i++) {
+			siblings.add(mother.getChildren().get(i));
+		}
+		for (int i = 0; i < father.getChildren().size(); i++) {
+			siblings.add(father.getChildren().get(i));
+		}
+	}
+
+	public void addSibling(Serf sibling) {
+		siblings.add(sibling);
+	}
+
+	public ArrayList<Serf> getChildren() {
+		return children;
+	}
+
+	public void addChildren(Serf child) {
+		children.add(child);
 	}
 
 }

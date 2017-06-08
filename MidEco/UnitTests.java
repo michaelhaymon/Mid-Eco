@@ -4,7 +4,6 @@ public class UnitTests {
 
 	@Test
 	public void unitTests() {
-		UnitTests tester = new UnitTests(); // UnitTests is tested
 
 		inventory();
 		nameGenerator();
