@@ -14,7 +14,7 @@ public class NameGenerator {
 	final protected static ArrayList<String>	firstNameArrayList	= new ArrayList<>();
 	final protected static ArrayList<String>	lastNameArrayList	= new ArrayList<>();
 
-	public void nameTest() {
+	public void nameTest() { // Tests Serf Generation using mother's name.
 		SerfGenerator serfGen = new SerfGenerator();
 		Serf serf = serfGen.newSerf("l'Angel");
 		System.out.println(serf.getFirstName() + " " + serf.getLastName());
@@ -23,13 +23,17 @@ public class NameGenerator {
 	public void generateName(Serf serf) {
 		// Get sex of Serf
 		if (serf.getSex().equals("F")) {
+			// Populates with Female names
 			populateNameArrayList(firstNameArrayList, FEMALE_FIRST_NAMES);
 		} else {
+			// Populates with Male names
 			populateNameArrayList(firstNameArrayList, MALE_FIRST_NAMES);
 		}
+		// If the Serf is not born, then randomly generate a last name,
 		if (serf.getMotherLastName().isEmpty()) {
 			populateNameArrayList(lastNameArrayList, LAST_NAMES);
 		} else {
+			// If the Serf is born, use the mother's last name.
 			lastNameArrayList.add(serf.getMotherLastName());
 		}
 
