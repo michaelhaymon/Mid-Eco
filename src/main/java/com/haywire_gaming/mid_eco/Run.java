@@ -5,12 +5,31 @@ import java.math.BigDecimal;
 
 public class Run {
 
-	public static void main(String[] args) throws IOException {
+	static Time time = new Time();
 
-		// SQL sql = new SQL();
-		// System.out.println("Connection: " + sql.connect());
+	public static void main(String[] args) throws IOException, InterruptedException {
+
 		// newSerfAndTradeTest();
-		reproduceTest();
+		// reproduceTest();
+		// while (true) {
+		// start();
+		// update();
+		// render();
+		// }
+
+		time.timePassageTest();
+
+	}
+
+	public static void start() {
+
+	}
+
+	public static void update() {
+
+	}
+
+	public static void render() {
 
 	}
 

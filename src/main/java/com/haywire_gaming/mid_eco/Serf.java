@@ -10,10 +10,10 @@ public class Serf {
 	protected String			lastName;
 	protected String			sex;
 	protected boolean			isFertile;
-	protected String			motherLastName;
-	protected ArrayList<Serf>	parents		= new ArrayList<>();
-	protected ArrayList<Serf>	siblings	= new ArrayList<>();
-	protected ArrayList<Serf>	children	= new ArrayList<>();
+	protected Serf				mother;
+	protected ArrayList<Serf>	parents		= new ArrayList<Serf>();
+	protected ArrayList<Serf>	siblings	= new ArrayList<Serf>();
+	protected ArrayList<Serf>	children	= new ArrayList<Serf>();
 
 	protected Inventory			inventory	= new Inventory();
 	protected Tasks				tasks		= new Tasks();
@@ -22,7 +22,7 @@ public class Serf {
 		final NameGenerator nameGenerator = new NameGenerator();
 		final Serf newSerf = new Serf();
 		newSerf.setSex(generateSex());
-		newSerf.setMotherLastName(mother.getLastName());
+		newSerf.setMother(mother);
 		nameGenerator.generateName(newSerf);
 
 		return newSerf;
@@ -105,12 +105,12 @@ public class Serf {
 		this.isFertile = isBreedingAge;
 	}
 
-	public String getMotherLastName() {
-		return motherLastName;
+	public Serf getMother() {
+		return mother;
 	}
 
-	public void setMotherLastName(String motherLastName) {
-		this.motherLastName = motherLastName;
+	public void setMother(Serf mother) {
+		this.mother = mother;
 	}
 
 	public ArrayList<Serf> getParents() {

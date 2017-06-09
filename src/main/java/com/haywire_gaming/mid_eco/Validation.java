@@ -22,8 +22,8 @@ public class Validation {
 
 	public boolean isCoupleInbreeding(Serf mother, Serf father) {
 
-		final ArrayList<Serf> motherFamily = new ArrayList<>();
-		final ArrayList<Serf> fatherFamily = new ArrayList<>();
+		final ArrayList<Serf> motherFamily = new ArrayList<Serf>();
+		final ArrayList<Serf> fatherFamily = new ArrayList<Serf>();
 
 		motherFamily.addAll(mother.getParents());
 		motherFamily.addAll(mother.getSiblings());
