@@ -9,8 +9,8 @@ public class Run {
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
-		// newSerfAndTradeTest();
-		// reproduceTest();
+		 newSerfAndTradeTest();
+		 reproduceTest();
 		// while (true) {
 		// start();
 		// update();
