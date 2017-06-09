@@ -1,3 +1,5 @@
+package com.haywire_gaming.mid_eco;
+
 import org.junit.Test;
 
 public class UnitTests {

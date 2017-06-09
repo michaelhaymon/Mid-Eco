@@ -1,3 +1,5 @@
+package com.haywire_gaming.mid_eco;
+
 import java.util.ArrayList;
 
 public class Validation {
@@ -20,8 +22,8 @@ public class Validation {
 
 	public boolean isCoupleInbreeding(Serf mother, Serf father) {
 
-		ArrayList<Serf> motherFamily = new ArrayList<>();
-		ArrayList<Serf> fatherFamily = new ArrayList<>();
+		final ArrayList<Serf> motherFamily = new ArrayList<>();
+		final ArrayList<Serf> fatherFamily = new ArrayList<>();
 
 		motherFamily.addAll(mother.getParents());
 		motherFamily.addAll(mother.getSiblings());

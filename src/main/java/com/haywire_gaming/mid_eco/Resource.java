@@ -1,11 +1,13 @@
+package com.haywire_gaming.mid_eco;
+
 import java.math.BigDecimal;
 
 public class Resource {
 
-	protected String name;
-	protected String type;
-	protected BigDecimal weight;
-	protected int amount;
+	protected String		name;
+	protected String		type;
+	protected BigDecimal	weight;
+	protected int			amount;
 
 	public String getName() {
 		return name;

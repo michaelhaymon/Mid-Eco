@@ -1,3 +1,5 @@
+package com.haywire_gaming.mid_eco;
+
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -17,8 +19,8 @@ public class Serf {
 	protected Tasks				tasks		= new Tasks();
 
 	protected Serf newSerf(Serf mother) {
-		NameGenerator nameGenerator = new NameGenerator();
-		Serf newSerf = new Serf();
+		final NameGenerator nameGenerator = new NameGenerator();
+		final Serf newSerf = new Serf();
 		newSerf.setSex(generateSex());
 		newSerf.setMotherLastName(mother.getLastName());
 		nameGenerator.generateName(newSerf);
@@ -29,7 +31,7 @@ public class Serf {
 	protected String generateSex() {
 		String sex = "F";
 		int randomNumber;
-		Random random = new Random();
+		final Random random = new Random();
 		randomNumber = random.nextInt(20) + 1;
 		if (randomNumber % 2 == 0) {
 			sex = "M";
