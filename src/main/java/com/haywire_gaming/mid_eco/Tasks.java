@@ -1,12 +1,14 @@
+package com.haywire_gaming.mid_eco;
+
 public class Tasks {
 
 	Validation validation = new Validation();
 
 	public void barter(Serf petitioner, Resource petitionerResource, int petitionerAmount, Serf respondent,
 			Resource respondentResource, int respondentAmount) {
-		int petitionerAmountOfResourceInInventory = petitioner.getInventory()
+		final int petitionerAmountOfResourceInInventory = petitioner.getInventory()
 				.getAmountFromInventory(petitionerResource);
-		int respondentAmountOfResourceInInventory = respondent.getInventory()
+		final int respondentAmountOfResourceInInventory = respondent.getInventory()
 				.getAmountFromInventory(respondentResource);
 		// This ensures both serfs have at least enough resources in their
 		// inventory to trade.

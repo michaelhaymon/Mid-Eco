@@ -1,3 +1,5 @@
+package com.haywire_gaming.mid_eco;
+
 import java.util.ArrayList;
 
 public class Inventory {

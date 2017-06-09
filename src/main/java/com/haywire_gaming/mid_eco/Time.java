@@ -1,3 +1,5 @@
+package com.haywire_gaming.mid_eco;
+
 public class Time {
 
 	protected void timePassageTest() {

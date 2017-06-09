@@ -1,3 +1,5 @@
+package com.haywire_gaming.mid_eco;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -43,7 +45,7 @@ public class NameGenerator {
 
 		try {
 			// FileReader fileReader = new FileReader(fileName);
-			BufferedReader bufferedReader = new BufferedReader(
+			final BufferedReader bufferedReader = new BufferedReader(
 					new InputStreamReader(new FileInputStream(fileName), "UTF8"));
 
 			String line = null;
@@ -53,9 +55,9 @@ public class NameGenerator {
 			}
 			bufferedReader.close();
 
-		} catch (FileNotFoundException ex) {
+		} catch (final FileNotFoundException ex) {
 			System.out.println("Unable to open file '" + fileName + "'");
-		} catch (IOException ex) {
+		} catch (final IOException ex) {
 			System.out.println("Error reading file '" + fileName + "'");
 		}
 	}

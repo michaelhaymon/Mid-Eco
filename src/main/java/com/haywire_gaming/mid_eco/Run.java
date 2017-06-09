@@ -1,3 +1,5 @@
+package com.haywire_gaming.mid_eco;
+
 import java.io.IOException;
 import java.math.BigDecimal;
 
@@ -13,13 +15,13 @@ public class Run {
 	}
 
 	public static void reproduceTest() {
-		Serf mother = new Serf();
+		final Serf mother = new Serf();
 		mother.setFirstName("Mom");
 		mother.setLastName("Test");
 		mother.setAge(20);
 		mother.setSex("F");
 
-		Serf father = new Serf();
+		final Serf father = new Serf();
 		father.setFirstName("Dad");
 		father.setLastName("Default");
 		father.setAge(20);
@@ -32,15 +34,15 @@ public class Run {
 		System.out.println(mother.getChildren().get(1).getFirstName() + " " + mother.getChildren().get(1).getLastName()
 				+ ": " + mother.getChildren().get(1).getAge() + mother.getChildren().get(1).getSex());
 
-		Serf firstChild = mother.getChildren().get(0);
+		final Serf firstChild = mother.getChildren().get(0);
 		firstChild.setAge(20);
 		firstChild.setSex("F");
 
-		Serf secondChild = mother.getChildren().get(1);
+		final Serf secondChild = mother.getChildren().get(1);
 		secondChild.setAge(20);
 		secondChild.setSex("M");
 
-		Serf fStranger = new Serf();
+		final Serf fStranger = new Serf();
 		fStranger.setFirstName("Stranger");
 		fStranger.setLastName("Lady");
 		fStranger.setAge(20);
@@ -51,26 +53,26 @@ public class Run {
 	}
 
 	public static void newSerfAndTradeTest() {
-		Serf mike = new Serf();
+		final Serf mike = new Serf();
 		mike.setFirstName("Mike");
 		mike.setLastName("Haymon");
 		mike.setAge(31);
 		mike.setSex("M");
 
-		Serf cade = new Serf();
+		final Serf cade = new Serf();
 		cade.setFirstName("Cade");
 		cade.setLastName("Calcote");
 		cade.setAge(27);
 		cade.setSex("M");
 
-		Resource wood = new Resource();
+		final Resource wood = new Resource();
 		wood.setName("Wood");
 		wood.setWeight(BigDecimal.valueOf(5));
 		wood.setAmount(1);
 
 		mike.insertIntoInventory(wood, 1);
 
-		Resource chicken = new Resource();
+		final Resource chicken = new Resource();
 		chicken.setName("Chicken");
 		chicken.setAmount(1);
 		chicken.setWeight(BigDecimal.valueOf(1));
