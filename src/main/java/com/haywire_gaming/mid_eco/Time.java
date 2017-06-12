@@ -2,8 +2,6 @@ package com.haywire_gaming.mid_eco;
 
 public class Time {
 
-	static final double MS_PER_FRAME = 16;
-
 	protected void timePassageTest() throws InterruptedException {
 
 		Serf serf = new Serf();
@@ -29,43 +27,11 @@ public class Time {
 
 	}
 
-	public void fPSLockTest() {
-
-	}
-
-	public void fPSTest() throws InterruptedException {
-		int FPS = 0;
-		Long start = 0L;
-		Long end = Time.getCurrentTime() + 1000;
-		while (start < end) {
-			System.out.println(start);
-			start = Time.getCurrentTime();
-			System.out.println("Sleep Duration: " + (start + MS_PER_FRAME - Time.getCurrentTime()) + " milliseconds.");
-			Thread.sleep((long) (start + MS_PER_FRAME - Time.getCurrentTime()));
-			System.out.println(Time.getCurrentTime());
-			FPS++;
-		}
-		System.out.println(FPS);
-	}
-
-	protected void startTime() {
-
-	}
-
 	protected static long getCurrentTime() {
 		return System.currentTimeMillis();
-	}
-
-	protected void stopTime() {
-
 	}
 
 	protected void insertEvent() {
 		// TODO this should insert an event into the current list of events.
 	}
-
-	protected void updateTime() {
-
-	}
-
 }

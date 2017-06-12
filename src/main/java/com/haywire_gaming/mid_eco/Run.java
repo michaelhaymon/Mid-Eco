@@ -5,31 +5,56 @@ import java.math.BigDecimal;
 
 public class Run {
 
-	static Time time = new Time();
+	static Time			time			= new Time();
+	static final double	MS_PER_FRAME	= 16;
 
 	public static void main(String[] args) throws IOException, InterruptedException {
 
 		// newSerfAndTradeTest();
 		// reproduceTest();
-		// start();
 		// time.timePassageTest();
-		time.fPSTest();
+		// time.fPSTest();
+		int FPS = 0;
+		double current = 0.0;
+		double lag = 0.0;
+		double end = (double) (Time.getCurrentTime() + 1000);
+		double lastUpdate = (double) Time.getCurrentTime();
+		while (current < end) {
+			current = (double) Time.getCurrentTime();
+			double elapsed = current - lastUpdate;
+			lastUpdate = current;
+			lag += elapsed;
+
+			processInput();
+
+			while (lag >= MS_PER_FRAME) {
+				update(elapsed);
+				lag -= MS_PER_FRAME;
+			}
+
+			render(lag / MS_PER_FRAME);
+
+			System.out
+					.println("Sleep Duration: " + (current + MS_PER_FRAME - Time.getCurrentTime()) + " milliseconds.");
+			Thread.sleep((long) (current + MS_PER_FRAME - Time.getCurrentTime()));
+			FPS++;
+		}
+		System.out.println("FPS: " + FPS);
 
 	}
 
-	public static void start() {
+	private static void processInput() {
+		// TODO Auto-generated method stub
+		// This is a placeholder for when player input is needed.
 
 	}
 
-	public static void processInput() {
+	// elapsed marks the time since the last update.
+	public static void update(double elapsed) {
 
 	}
 
-	public static void update() {
-
-	}
-
-	public static void render() {
+	public static void render(double lag) {
 
 	}
 
@@ -69,6 +94,7 @@ public class Run {
 
 		firstChild.tasks.reproduce(firstChild, fStranger);
 		firstChild.tasks.reproduce(firstChild, secondChild);
+
 	}
 
 	public static void newSerfAndTradeTest() {
