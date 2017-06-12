@@ -10,13 +10,11 @@ public class Tasks {
 
 	public void takeResourceFromInventory(Person person, Resource resource, int amount, Inventory inventory) {
 		if (inventory.getAmountFromInventory(resource) >= amount) {
-			System.out.println("Removing " + amount + " " + resource.getName());
 			inventory.removeFromInventory(resource, amount);
 			Resource transferredResource = new Resource();
 			transferredResource.setName(resource.getName());
 			transferredResource.setType(resource.getType());
 			transferredResource.setWeight(resource.getWeight());
-			System.out.println("Inserting " + amount + " " + resource.getName());
 			person.inventory.insertIntoInventory(transferredResource, amount);
 		} else {
 			Run.log(person.getFirstName() + " tried to remove " + resource.getName() + "(" + amount
