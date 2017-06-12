@@ -17,7 +17,7 @@ public class NameGenerator {
 	final protected static ArrayList<String>	firstNameArrayList	= new ArrayList<String>();
 	final protected static ArrayList<String>	lastNameArrayList	= new ArrayList<String>();
 
-	public void generateName(Serf serf) {
+	public void generateName(Person serf) {
 		// Get sex of Serf
 		if (serf.getSex().equals("F")) {
 			// Populates with Female names

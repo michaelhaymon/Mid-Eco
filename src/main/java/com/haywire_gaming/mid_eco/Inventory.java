@@ -6,7 +6,7 @@ public class Inventory {
 
 	ArrayList<Resource> inventory = new ArrayList<Resource>();
 
-	protected void insertIntoInvertory(Resource resource, int amount) {
+	protected void insertIntoInventory(Resource resource, int amount) {
 		if (getAmountFromInventory(resource) > 0) {
 			setInventoryAmount(resource, amount);
 		} else {

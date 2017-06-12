@@ -4,8 +4,8 @@ public class Time {
 
 	protected void timePassageTest() throws InterruptedException {
 
-		Serf serf = new Serf();
-		serf = serf.newSerf(null);
+		Person serf = new Person();
+		serf = serf.newPerson(null);
 		System.out.println("The sun has risen.");
 		Thread.sleep(3000);
 		System.out.println(serf.getFirstName() + " is looking for something to do.");
