@@ -14,10 +14,10 @@ public class NameGenerator {
 	final static String							MALE_FIRST_NAMES	= "English Male First Names.txt";
 	final static String							LAST_NAMES			= "English Last Names.txt";
 
-	final protected static ArrayList<String>	firstNameArrayList	= new ArrayList<>();
-	final protected static ArrayList<String>	lastNameArrayList	= new ArrayList<>();
+	final protected static ArrayList<String>	firstNameArrayList	= new ArrayList<String>();
+	final protected static ArrayList<String>	lastNameArrayList	= new ArrayList<String>();
 
-	public void generateName(Serf serf) {
+	public void generateName(Person serf) {
 		// Get sex of Serf
 		if (serf.getSex().equals("F")) {
 			// Populates with Female names
@@ -26,12 +26,12 @@ public class NameGenerator {
 			// Populates with Male names
 			populateNameArrayList(firstNameArrayList, MALE_FIRST_NAMES);
 		}
-		// If the Serf is not born, then randomly generate a last name,
-		if (serf.getMotherLastName().isEmpty()) {
-			populateNameArrayList(lastNameArrayList, LAST_NAMES);
-		} else {
+		if (serf.getMother() != null) {
 			// If the Serf is born, use the mother's last name.
-			lastNameArrayList.add(serf.getMotherLastName());
+			lastNameArrayList.add(serf.getMother().getLastName());
+		} else {
+			// If the Serf is not born, then randomly generate a last name,
+			populateNameArrayList(lastNameArrayList, LAST_NAMES);
 		}
 
 		int rng = new Random().nextInt(firstNameArrayList.size());
