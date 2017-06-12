@@ -9,14 +9,8 @@ public class Validation {
 			if (mother.isFertile() && father.isFertile()) {
 				return true;
 			}
-			if (!mother.isFertile()) {
-				Run.log("Mother is infertile.");
-			}
-			if (!father.isFertile()) {
-				Run.log("Father is infertile.");
-			}
 		}
-		Run.log("Couple is infertile.");
+		// Couple is infertile.
 		return false;
 	}
 
@@ -33,11 +27,11 @@ public class Validation {
 
 		for (int i = 0; i < fatherFamily.size(); i++) {
 			if (motherFamily.contains(fatherFamily.get(i))) {
-				Run.log("Incest.");
+				// Incest.
 				return true;
 			}
 		}
-		Run.log("Not Incest.");
+		// Not incest.
 		return false;
 	}
 }

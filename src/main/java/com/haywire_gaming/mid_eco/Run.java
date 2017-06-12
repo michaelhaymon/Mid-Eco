@@ -11,17 +11,17 @@ public class Run {
 
 		// newSerfAndTradeTest();
 		// reproduceTest();
-		// while (true) {
 		// start();
-		// update();
-		// render();
-		// }
-
-		time.timePassageTest();
+		// time.timePassageTest();
+		time.fPSTest();
 
 	}
 
 	public static void start() {
+
+	}
+
+	public static void processInput() {
 
 	}
 
