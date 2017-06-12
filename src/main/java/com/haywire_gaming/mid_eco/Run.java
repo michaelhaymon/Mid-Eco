@@ -14,6 +14,7 @@ public class Run {
 		// time.timePassageTest();
 		// time.fPSTest();
 		// transferInventoryTest();
+		rapTest();
 
 	}
 
@@ -59,6 +60,15 @@ public class Run {
 
 	public static void render(double lag) {
 
+	}
+
+	public static void rapTest() {
+		Person lumberjack = new Person();
+		lumberjack.setFirstName("Lumberjack.");
+		Resource fellingAxe = new Resource();
+		lumberjack.inventory.insertIntoInventory(fellingAxe, 1);
+		ResourceAccessPoint tree = new ResourceAccessPoint();
+		lumberjack.tasks.acquireResourceFromRAP(lumberjack, tree);
 	}
 
 	public static void transferInventoryTest() {

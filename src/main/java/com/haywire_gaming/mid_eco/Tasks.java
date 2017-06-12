@@ -4,7 +4,7 @@ public class Tasks {
 
 	Validation validation = new Validation();
 
-	public void acquireResourceFromRAP() {
+	public void acquireResourceFromRAP(Person person, ResourceAccessPoint rap) {
 
 	}
 
