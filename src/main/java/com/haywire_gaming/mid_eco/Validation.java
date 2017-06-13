@@ -4,26 +4,20 @@ import java.util.ArrayList;
 
 public class Validation {
 
-	public boolean isCoupleFertile(Serf mother, Serf father) {
+	public boolean isCoupleFertile(Person mother, Person father) {
 		if (!(mother.getSex().equals(father.getSex()))) {
 			if (mother.isFertile() && father.isFertile()) {
 				return true;
 			}
-			if (!mother.isFertile()) {
-				Run.log("Mother is infertile.");
-			}
-			if (!father.isFertile()) {
-				Run.log("Father is infertile.");
-			}
 		}
-		Run.log("Couple is infertile.");
+		// Couple is infertile.
 		return false;
 	}
 
-	public boolean isCoupleInbreeding(Serf mother, Serf father) {
+	public boolean isCoupleInbreeding(Person mother, Person father) {
 
-		final ArrayList<Serf> motherFamily = new ArrayList<>();
-		final ArrayList<Serf> fatherFamily = new ArrayList<>();
+		final ArrayList<Person> motherFamily = new ArrayList<Person>();
+		final ArrayList<Person> fatherFamily = new ArrayList<Person>();
 
 		motherFamily.addAll(mother.getParents());
 		motherFamily.addAll(mother.getSiblings());
@@ -33,11 +27,11 @@ public class Validation {
 
 		for (int i = 0; i < fatherFamily.size(); i++) {
 			if (motherFamily.contains(fatherFamily.get(i))) {
-				Run.log("Incest.");
+				// Incest.
 				return true;
 			}
 		}
-		Run.log("Not Incest.");
+		// Not incest.
 		return false;
 	}
 }

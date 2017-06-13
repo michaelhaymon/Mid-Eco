@@ -3,29 +3,29 @@ package com.haywire_gaming.mid_eco;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class Serf {
+public class Person {
 
 	protected int				age			= 0;
 	protected String			firstName;
 	protected String			lastName;
 	protected String			sex;
 	protected boolean			isFertile;
-	protected String			motherLastName;
-	protected ArrayList<Serf>	parents		= new ArrayList<>();
-	protected ArrayList<Serf>	siblings	= new ArrayList<>();
-	protected ArrayList<Serf>	children	= new ArrayList<>();
+	protected Person			mother;
+	protected ArrayList<Person>	parents		= new ArrayList<Person>();
+	protected ArrayList<Person>	siblings	= new ArrayList<Person>();
+	protected ArrayList<Person>	children	= new ArrayList<Person>();
 
 	protected Inventory			inventory	= new Inventory();
 	protected Tasks				tasks		= new Tasks();
 
-	protected Serf newSerf(Serf mother) {
+	protected Person newPerson(Person mother) {
 		final NameGenerator nameGenerator = new NameGenerator();
-		final Serf newSerf = new Serf();
-		newSerf.setSex(generateSex());
-		newSerf.setMotherLastName(mother.getLastName());
-		nameGenerator.generateName(newSerf);
+		final Person newPerson = new Person();
+		newPerson.setSex(generateSex());
+		newPerson.setMother(mother);
+		nameGenerator.generateName(newPerson);
 
-		return newSerf;
+		return newPerson;
 	}
 
 	protected String generateSex() {
@@ -40,20 +40,20 @@ public class Serf {
 	}
 
 	public void insertIntoInventory(Resource resource, int amount) {
-		inventory.insertIntoInvertory(resource, amount);
+		inventory.insertIntoInventory(resource, amount);
 	}
 
 	public void removeFromInventory(Resource resource, int amount) {
 		inventory.removeFromInventory(resource, amount);
 	}
 
-	public void barter(Serf petitioner, Resource petitionerResource, int petitionerAmount, Serf respondent,
+	public void barter(Person petitioner, Resource petitionerResource, int petitionerAmount, Person respondent,
 			Resource respondentResource, int respondentAmount) {
 		tasks.barter(petitioner, petitionerResource, petitionerAmount, respondent, respondentResource,
 				respondentAmount);
 	}
 
-	public void displaySerf() {
+	public void displayPerson() {
 		System.out.println(getFirstName() + " " + getLastName() + ": " + getAge() + getSex());
 	}
 
@@ -105,28 +105,28 @@ public class Serf {
 		this.isFertile = isBreedingAge;
 	}
 
-	public String getMotherLastName() {
-		return motherLastName;
+	public Person getMother() {
+		return mother;
 	}
 
-	public void setMotherLastName(String motherLastName) {
-		this.motherLastName = motherLastName;
+	public void setMother(Person mother) {
+		this.mother = mother;
 	}
 
-	public ArrayList<Serf> getParents() {
+	public ArrayList<Person> getParents() {
 		return parents;
 	}
 
-	public void setParents(Serf mother, Serf father) {
+	public void setParents(Person mother, Person father) {
 		parents.add(mother);
 		parents.add(father);
 	}
 
-	public ArrayList<Serf> getSiblings() {
+	public ArrayList<Person> getSiblings() {
 		return siblings;
 	}
 
-	public void setSiblings(Serf mother, Serf father) {
+	public void setSiblings(Person mother, Person father) {
 		for (int i = 0; i < mother.getChildren().size(); i++) {
 			siblings.add(mother.getChildren().get(i));
 		}
@@ -135,15 +135,15 @@ public class Serf {
 		}
 	}
 
-	public void addSibling(Serf sibling) {
+	public void addSibling(Person sibling) {
 		siblings.add(sibling);
 	}
 
-	public ArrayList<Serf> getChildren() {
+	public ArrayList<Person> getChildren() {
 		return children;
 	}
 
-	public void addChildren(Serf child) {
+	public void addChildren(Person child) {
 		children.add(child);
 	}
 
